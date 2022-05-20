@@ -190,19 +190,19 @@ section#home>div {
 }
 
 #tShirt {
-    background: url("/assets/shirt.svg");
+    background: url("../assets/shirt.svg");
 }
 
 #sportWear {
-    background: url("/assets/shoe.svg");
+    background: url("../assets/shoe.svg");
 }
 
 #runningCap {
-    background: url("/assets/cap.svg");
+    background: url("../assets/cap.svg");
 }
 
 #redBag {
-    background: url("/assets/bag.svg");
+    background: url("../assets/bag.svg");
 }
 
 
@@ -366,11 +366,11 @@ div.modal .btn {
 }
 
 #cp1-img {
-    background-image: url("/assets/cotton.jpg");
+    background-image: url("../assets/cotton.jpg");
 }
 
 #cp2-img {
-    background-image: url("/assets/weave.jpg");
+    background-image: url("../assets/weave.jpg");
 }
 
 #cp3-img {
@@ -387,19 +387,19 @@ div.modal .btn {
 }
 
 #cp1 {
-    background: url("/assets/cotton_thumbnail.jpg");
+    background: url("../assets/cotton_thumbnail.jpg");
 }
 
 #cp2 {
-    background: url("/assets/weave_thumbnail.jpg")
+    background: url("../assets/weave_thumbnail.jpg")
 }
 
 #cp3 {
-    background: url("/assets/production_thumbnail.jpg");
+    background: url("../assets/production_thumbnail.jpg");
 }
 
 #cp4 {
-    background: url("/assets/tShirt_thumbnail.jpg");
+    background: url("../assets/tShirt_thumbnail.jpg");
 }
 
 #cp1 #timeline-notice {
