@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIRS Customisation Remote DEMO</title>
+
+    <!-- font awesome icons -->
+    <script src="https://kit.fontawesome.com/21eb5ae1f0.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/lib/jquery-3.6.0.min.js"></script>
+    <script src="js/main.js" defer></script>
+</head>
+
+<body>
+    <div class="nav-div">
+        <nav>
+            <div>
+                <div id="back"><i class="fas fa-chevron-left"></i></i>
+                </div>
+                <div class="nav-head">SIRS Customisation Control</div>
+            </div>
+            <div id="exit"><i class="fas fa-sign-out-alt"></i>Exit</div>
+        </nav>
+    </div>
+    <div id="bot-wave"></div>
+    <!-- HOME -->
+    <section id="home">
+        <div>
+            <div class="head-flex">
+                <div class="head-text">
+                    <h2>Welcome to the SIRS <br> Customisation System</h2>
+                    Pick an item to start
+                </div>
+                <div class="items-select-container">
+                    <div class="items-select" id="tShirt"></div>
+                    <div class="items-select btn-disabled" id="sportWear"></div>
+                    <div class="items-select btn-disabled" id="runningCap"></div>
+                    <div class="items-select btn-disabled" id="redBag"></div>
+                </div>
+            </div>
+            <div id="info"><i class="fas fa-info-circle"></i>What is this?</div>
+        </div>
+
+    </section>
+    <!-- ITEM SELECTED -->
+    <section id="selected">
+        <div>
+            <div class="item-selected">
+                <div class="item-selected-img">
+                </div>
+                <div class="item-selected-name">Product Name</div>
+            </div>
+            <div class="item-selected-opt">
+                <div class="btn custom-opt" id="link-custom">
+                    <i class="fas fa-palette"></i >Customise 
+                </div>
+                <div class="btn custom-opt" id="link-timeline">
+                    <i class="fas fa-industry"></i>The Making Of
+                </div>
+                <div class="btn custom-opt btn-disabled" id="link-explode">
+                    <i class="fas fa-wrench"></i>Deconstruction
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- CUSTOMISATION -->
+    <section id="custom">
+        <div>
+            <div class="custom-size">
+                <div class="label-text">Preset Colours</div>
+                <!-- CLOTHING PRESETS COLORS -->
+                <div class="custom-color-clothing">
+                    <div>
+                        <input type="radio" name="clothingColors" id="color-red" value="color-red">
+                        <label for="color-red"></label>
+                    </div>
+                    <div>
+                        <input type="radio" name="clothingColors" id="color-green" value="color-green">
+                        <label for="color-green"></label>
+                    </div>
+                    <div>
+                        <input type="radio" name="clothingColors" id="color-blue" value="color-blue">
+                        <label for="color-blue"></label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CUSTOM COLORS -->
+            <div class="custom-parts-clothing">
+                <div class="label-text">Parts of Clothing</div>
+                <div>
+                    <select name="" id="">
+                        <option value="">Whole Shirt</option>
+                        <option value="">Left Sleeve</option>
+                        <option value="">Right Sleeve</option>
+                        <option value="">Neck Open</option>
+                    </select>
+                </div>
+                <div>
+                    <!-- color wheel -->
+                    <div class="colorwheel">
+                        <div id="color-pin"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="custom-btn">
+                <!-- <div class="btn back-btn">
+                    <i class="fas fa-long-arrow-alt-left"></i>
+                </div> -->
+                <div class="btn" id="custom-reset">
+                    <i class="fas fa-trash-alt"></i>
+                </div>
+                <div class="btn custom-opt" id="link-save">
+                    Done
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- SAVE QR CODE -->
+    <section id="save">
+        <div>
+            <div id="customised-img" class="item-selected-img"></div>
+            <div class="head-text" id="customised-text">
+                <h2 id="customised-name">Customised Product</h2>
+                <p>This QR contains your customised design. Ask a Staff to scan this or enter the code below on https://sirs.nyp-ixd.sg</p>
+            </div>
+            <img id="qrCode" src="/assets/QRCode.svg">
+            <div class="btn" id="saveQr">
+                Save QR
+            </div>
+        </div>
+    </section>
+    <div class="modal" id="cfm-page">
+        <div>
+            <div class="head-text">
+                <h2>QR Saved</h2>
+            </div>
+            <div id="cfm-content">
+                <p>Your QR Code has been saved to your device.</p>
+            </div>
+            <div class="btn menu-btn">Back to Menu</div>
+        </div>
+    </div>
+    <!-- TIMELINE / THE MAKING OF -->
+    <section id="timeline">
+        <div id="timeline-container">
+            <div id="item-timeline-line"></div>
+            <div id="item-timeline">
+                <div class="timeline-box" id="t1">
+                    <div class="timeline-content image" id="cp1-img">
+                    </div>
+                    <div class="timeline-text">
+                        <h2>Our Cotton</h2>
+                        <p>Our Cotton is harvested from the sunny fields of USA where they are treated with the utmost care to produce only the highest quality cotton for your T-shirts.</p>
+                    </div>
+                    <div class="timeline-cp" id="cp1"></div>
+                    <p id="instruction">Swipe left and right to navigate</p>
+
+                </div>
+                <div class="timeline-box">
+                    <div class="timeline-content image" id="cp2-img">
+                    </div>
+                    <div class="timeline-text">
+                        <h2>Weaving Process</h2>
+                        <p>After harvesting, our cotton fibres is sent to a facility where they are turned into loose strands before being knitted on a looming machine.</p>
+                    </div>
+                    <div class="timeline-cp" id="cp2"></div>
+
+                </div>
+                <div class="timeline-box">
+                    <div class="timeline-content image" id="cp3-img">
+                    </div>
+                    <div class="timeline-text">
+                        <h2>Assembly</h2>
+                        <p>The cotton pieces are then delicately cut and stitched together in this stage to form your t-shirts. </p>
+                    </div>
+                    <div class="timeline-cp" id="cp3"></div>
+
+                </div>
+                <div class="timeline-box">
+                    <div class="timeline-content image" id="cp4-img">
+                    </div>
+                    <div class="timeline-text">
+                        <h2>Distribution</h2>
+                        <p>Once done, your favourite T-shirt is then shipped to the various distribution facilities to be shipped to the stores near you. </p>
+                    </div>
+                    <div class="timeline-cp" id="cp4"></div>
+                </div>
+                <div class="timeline-box">
+                    <div class="timeline-content image" id="cp5-img">
+                    </div>
+                    <div class="timeline-text-end">
+                        <h2>You've reached the end!</h2>
+                        <p>we hope you've enjoyed the experience! </p>
+                        <div class="btn menu-btn timeline-btn">Back to Menu</div>
+                    </div>
+                    <div class="timeline-cp" id="cp5"></div>
+
+                </div>
+            </div>
+
+            <!-- <div id="timeline-notice">
+                    <div id="timeline-ani">
+                        <div id="timeline-swipe"><i class="fas fa-hand-point-up"></i></div>
+                        <div>SWIPE GESTURE</div>
+                    </div>
+                    <div id="timeline-notice-text">
+                        <div>Swipe Upwards to view <br>Content on the LED Display!</div>
+                        <div>Swipe Left or Right <br>to follow through the timeline!</div>
+                    </div>
+                </div> -->
+
+
+
+            <div class="btn back-btn">
+                <i class="fas fa-long-arrow-alt-left"></i>Back to selection
+            </div>
+        </div>
+    </section>
+    <!-- EXPLOSION VIEW -->
+    <section id="explode">
+        <!-- Next Coder take over. -JerwinJGKC -->
+    </section>
+    <div class="modal" id="info-page">
+        <div>
+            <div class="head-text">Weclome to SIRS<br>Experiential Retail Hub</div>
+            <div id="info-content">
+                <!-- Thanks for trying this demo.<br>Build by NYP IxD Students. -->
+            </div>
+            <div class="btn">Close</div>
+        </div>
+    </div>
+    <div class="modal" id="exit-modal">
+        <div>
+            <div class="head-text">
+                <h2 id="exit-header">Session Timeout</h2>
+            </div>
+            <div id="exit-content">
+                <p>
+                </p>
+            </div>
+            <div class="btn" id="exit-btn">Close Tab</div>
+        </div>
+    </div>
+</body>
+
+</html>
